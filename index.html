@@ -16,7 +16,7 @@
             height: 600px;
             width: 600px;
             border-style: dotted;
-            background-color: #f2cc8f;
+            background-color: #e6ccb2;
 
         }
 
@@ -38,13 +38,52 @@
 
         img{
             height: 240px;
-            width: 240px;
+            width: 255px;
             float: left;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /*Image in normal position*/
+            }
+            50% {
+                transform: translateY(10px); /*Image moves up 10 px*/
+            }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         .signature{
             text-align: right;
             font-family: 'Segoe Print';
+            opacity: 0; /* Start hidden */
+            animation: slideIn 2s ease-out forwards;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1; /*Fully visible*/
+            }
+            50% {
+                opacity: 0.5; /*faded*/
+            }
+        }
+
+        .pulse {
+            animation: pulse 1s infinite;
         }
     </style>
 </head>
@@ -56,17 +95,17 @@
             </h2>
             
             <p>
-                I have a good friend. She's <span style="color: #f72585;">beautiful</span> and incredibly <span style="color: #ff7b00;">kind to me</span>. She offers me more emotional value than anyone else. No matter where I go or what I do, she's always enthusiastic, never stingy with her support and affection. I love spending time with her.
+                I have a good friend. She's <span class="pulse" style="color: #f72585;">beautiful</span> and incredibly <span class="pulse" style="color: #ff7b00;">kind to me</span>. She offers me more <span class="pulse" style="color: green;">emotional value</span> than anyone else. No matter where I go or what I do, she's always <span class="pulse" style="color: cyan;">enthusiastic</span>, never stingy with her <span class="pulse" style="color: yellow;">support</span> and <span class="pulse" style="color: #f72585;">affection</span>. I love spending time with her.
             </p>
             <p>
-                She's like a rainbow with all its colors, carrying the warm, comforting scent of freshly baked bread from a bakery. Her hugs are warmer than a hot water bottle, her heart softer than a feather pillow. She has this incredible ability to pull me out of the darkest places, and she’s genuinely sincere, with all her heart and soul.
+                She's like a <span class="pulse" style="color: #f72585;">rainbow</span> with all its colors, carrying the warm, comforting <span class="pulse" style="color: yellow;">scent</span> of freshly baked bread from a bakery. Her <span class="pulse" style="color: cyan;">hugs</span> are warmer than a hot water bottle, her <span class="pulse" style="color: #ff7b00;">heart</span> softer than a feather pillow. She has this incredible <span class="pulse" style="color: cyan;">ability</span> to pull me out of the darkest places, and she’s genuinely <span class="pulse" style="color: purple;">sincere, with all her heart and soul.</span>
             </p>
-            <img src="a-girl-with-flower.png" alt="A girl with flower"/>
+            <img src="../Love-Letter/assets/a-girl-with-flower.png" alt="A girl with flower" class="bounce"/>
             <p>
-                I hope she doesn't waste her tears on people who don't deserve to see that beautiful face of hers.
+                I hope she doesn't waste her tears on <span class="pulse" style="color: cyan;">people who don't deserve</span> to see that <span class="pulse" style="color: #f72585;">beautiful face</span> of hers.
             </p>
             <p>
-                I hope she finds wealth, love, and that good luck follows her always!
+                I hope she finds <span class="pulse" style="color: #ff7b00;">wealth</span>, <span class="pulse" style="color: purple;">love</span>, and that <span class="pulse" style="color: yellow;">good luck</span> follows her always!
             </p>
 
             <div class="signature">
